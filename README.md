@@ -1,27 +1,35 @@
-# AngularSortingApp
+# Angular Sorting App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Angular Sorting Algorithms Visualize.
 
-## Development server
+## App review :tv:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+  - Simple algorithms simulation with Angular.
 
-## Code scaffolding
+![image](https://github.com/huydu20/angular-sorting-algorithms/assets/89365325/f9e19d66-f0f2-4e1a-8b1f-7817309772dc)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to use :book: ?
+- Chose options:
 
-## Build
+![image](https://github.com/huydu20/angular-sorting-algorithms/assets/89365325/7c134aef-e40f-4ab4-905d-a55b9804522b)
+- Click these sort button: 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![image](https://github.com/huydu20/angular-sorting-algorithms/assets/89365325/0c022881-a6be-4cfd-b22a-95925edc68a6)
+- Get the result: 
+![](https://github.com/huydu20/angular-sorting-algorithms/tree/main/src/assets/gif/sorting-app.gif)
 
-## Running unit tests
+## Setting up development environment 🛠
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `git clone https://github.com/huydu20/angular-sorting-algorithms.git`
+- `cd angular-sorting-algorithms`
+- `ng serve`
+- The app should run on `http://localhost:4200/`
 
-## Running end-to-end tests
+## Check out my social medias:
+  - :movie_camera: <a href="https://www.youtube.com/channel/UCMplfZd5BxMHy3Y6OVvLblg">Youtube.</a>
+  - :link: <a href="https://www.linkedin.com/in/v%C4%83n-huy-du-a68821258/">LinkedIn.</a>
+  - :iphone: <a href="https://www.tiktok.com/@hijublog?is_from_webapp=1&sender_device=pc">Tiktok.</a>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Licence
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Feel free to use my code on your project. It would be great if you put a reference to this repository.
