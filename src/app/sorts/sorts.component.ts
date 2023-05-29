@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class SortsComponent implements OnInit {
   isSorting: boolean = false;
-  isDelay: boolean = true
+  isDelay: boolean = true;
   delay: number = 10;
   columns: number[] = [];
   constructor() {}
@@ -29,11 +29,11 @@ export class SortsComponent implements OnInit {
   }
 
   handleDelay() {
-    this.isDelay = !this.isDelay
+    this.isDelay = !this.isDelay;
   }
 
   handleInputMs(event: Event) {
-    console.log(event)
+    console.log(event);
   }
 
   handleBubbleSort() {
@@ -73,6 +73,26 @@ export class SortsComponent implements OnInit {
       this.isSorting = false;
     };
     selectionSort();
+  }
+
+  handleInsertionSort() {
+    this.isSorting = true;
+    const insertionSort = async () => {
+      for (let i = 1; i < this.columns.length; i++) {
+        let key = this.columns[i];
+        let j = i - 1;
+        while (j >= 0 && this.columns[j] > key) {
+          this.columns[j + 1] = this.columns[j];
+          j = j - 1
+        }
+        if (this.isDelay) {
+          await this.sleep(this.delay);
+        }
+        this.columns[j + 1] = key;
+      }
+      this.isSorting = false;
+    };
+    insertionSort();
   }
 
   shuffle(array: number[]) {

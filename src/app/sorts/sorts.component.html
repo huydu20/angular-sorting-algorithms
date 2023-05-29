@@ -20,6 +20,14 @@
     <button
       [disabled]="isSorting"
       [ngClass]="{ disabled: isSorting }"
+      (click)="handleInsertionSort()"
+      class="btn"
+    >
+      Insertion Sort
+    </button>
+    <button
+      [disabled]="isSorting"
+      [ngClass]="{ disabled: isSorting }"
       (click)="reset()"
       class="btn"
     >
