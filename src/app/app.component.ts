@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_sorting_app';
+
+  columns = []
+
+
 }

@@ -1,0 +1,52 @@
+<div class="mt-12 flex gap-8 border-gray-300 rounded-lg flex-col items-center">
+  <app-column-list [values]="columns"></app-column-list>
+  <div class="flex gap-4">
+    <button
+      [disabled]="isSorting"
+      [ngClass]="{ disabled: isSorting }"
+      (click)="handleBubbleSort()"
+      class="btn"
+    >
+      Bubble Sort
+    </button>
+    <button
+      [disabled]="isSorting"
+      [ngClass]="{ disabled: isSorting }"
+      (click)="handleSelectionSort()"
+      class="btn"
+    >
+      Selection Sort
+    </button>
+    <button
+      [disabled]="isSorting"
+      [ngClass]="{ disabled: isSorting }"
+      (click)="reset()"
+      class="btn"
+    >
+      Reset
+    </button>
+  </div>
+  <div class="flex gap-4">
+    <div class="flex gap-4 items-center">
+      <label for="delay" class="ml-2 text-sm font-medium">Delay</label>
+      <input
+        (change)="handleDelay()"
+        id="delay"
+        type="checkbox"
+        [checked]="isDelay"
+        class="w-4 h-4 text-blue-600 bg-blue-500 border-gray-300 rounded-md focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-blue-500 dark:border-gray-600"
+      />
+    </div>
+    <div class="flex gap-4 items-center">
+      <label for="ms" class="ml-2 text-sm font-medium">MS</label>
+      <input
+        [(ngModel)]="delay"
+        id="ms"
+        type="number"
+        class="text-gray-800 px-2 py-1 rounded-md"
+        value="10"
+        min="0"
+      />
+    </div>
+  </div>
+</div>

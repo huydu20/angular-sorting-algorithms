@@ -1,0 +1,7 @@
+.btn {
+  @apply px-3 font-medium hover:bg-blue-900 transition-all py-1 border-2 border-gray-200 rounded-md
+}
+
+.btn.disabled {
+  @apply cursor-not-allowed hover:bg-transparent
+}
