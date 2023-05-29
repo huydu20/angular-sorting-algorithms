@@ -28,6 +28,22 @@
     <button
       [disabled]="isSorting"
       [ngClass]="{ disabled: isSorting }"
+      (click)="handleQuickSort()"
+      class="btn"
+    >
+      Quick Sort
+    </button>
+    <!-- <button
+      [disabled]="isSorting"
+      [ngClass]="{ disabled: isSorting }"
+      (click)="handleMergeSort()"
+      class="btn"
+    >
+      Merge Sort
+    </button> -->
+    <button
+      [disabled]="isSorting"
+      [ngClass]="{ disabled: isSorting }"
       (click)="reset()"
       class="btn"
     >
@@ -38,7 +54,6 @@
     <div class="flex gap-4 items-center">
       <label for="delay" class="ml-2 text-sm font-medium">Delay</label>
       <input
-        (change)="handleDelay()"
         id="delay"
         type="checkbox"
         [checked]="isDelay"
