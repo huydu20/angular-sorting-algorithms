@@ -34,7 +34,6 @@ export class SortsComponent implements OnInit {
 
   handleBubbleSort() {
     this.isSorting = true;
-    console.log(this.isSorting);
     const bubbleSort = async () => {
       for (let i = 0; i < this.columns.length; i++) {
         for (let j = 0; j < this.columns.length - 1; j++) {
@@ -92,63 +91,58 @@ export class SortsComponent implements OnInit {
   }
 
   // <<<<<  THIS CODE GOT A BIG BUGS - PLEASE DON'T UNCOMMENT  >>>>>>
-  // merge(left: number, middle: number, right: number) {
-  //   const _merge = async () => {
-  //     let i, j, k;
-  //     let lenLeft = middle - left + 1;
-  //     let lenRight = right - middle;
-  //     let leftArray: number[] = [];
-  //     let rightArray: number[] = [];
-  //     for (i = 0; i < lenLeft; i++) leftArray.push(this.columns[left + i]);
-  //     for (j = 0; j < lenRight; j++) rightArray.push(this.columns[middle + 1 + j]);
+  /*
+  async merge(left: number, middle: number, right: number) {
+    let i, j, k;
+    let lenLeft = middle - left + 1;
+    let lenRight = right - middle;
+    let leftArray: number[] = [];
+    let rightArray: number[] = [];
+    for (i = 0; i < lenLeft; i++) leftArray.push(this.columns[left + i]);
+    for (j = 0; j < lenRight; j++) rightArray.push(this.columns[middle + 1 + j]);
+    i = 0;
+    j = 0;
+    k = left;
+    while (i < lenLeft && j < lenRight) {
+      if (leftArray[i] <= rightArray[j]) {
+        this.columns[k] = leftArray[i];
+        i++;
+      } else {
+        this.columns[k] = rightArray[j];
+        j++;
+      }
+      k++;
+      while (i < lenLeft) {
+        this.columns[k] = leftArray[i];
+        i++;
+        k++;
+      }
+      while (j < lenRight) {
+        this.columns[k] = rightArray[j];
+        j++;
+        k++;
+      }
+      if (this.isDelay) {
+        await this.sleep(this.delay);
+      }
+    }
+  }
 
-  //     console.log(leftArray)
-  //     console.log(rightArray)
-  //     i = 0;
-  //     j = 0;
-  //     k = left;
-  //     while (i < lenLeft && j < lenRight) {
-  //       if (leftArray[i] <= rightArray[j]) {
-  //         this.columns[k] = leftArray[i];
-  //         i++;
-  //       } else {
-  //         this.columns[k] = rightArray[j];
-  //         j++;
-  //       }
-  //       k++;
-  //       /*=============== */
-  //       while (i < lenLeft) {
-  //         this.columns[k] = leftArray[i];
-  //         i++;
-  //         k++;
-  //       }
-  //       while (j < lenRight) {
-  //         this.columns[k] = rightArray[j];
-  //         j++;
-  //         k++;
-  //       }
-  //       if(this.isDelay) {
-  //         await this.sleep(this.delay)
-  //       }
-  //     }
-  //   };
-  //   _merge()
-  // }
+  mergeSort(left: number, right: number) {
+    if (left < right) {
+      let middle = left + (right - left) / 2;
+      this.mergeSort(left, middle);
+      this.mergeSort(middle + 1, right);
+      this.merge(left, middle, right);
+    }
+  }
 
-  // mergeSort(left: number, right: number) {
-  //   if (left < right) {
-  //     let middle = left + (right - left) / 2;
-  //     this.mergeSort(left, middle);
-  //     this.mergeSort(middle + 1, right);
-  //     this.merge(left, middle, right);
-  //   }
-  // }
-
-  // handleMergeSort() {
-  //   this.isSorting = true;
-  //   this.mergeSort(0, this.columns.length - 1)
-  //   this.isSorting = false
-  // }
+  handleMergeSort() {
+    this.isSorting = true;
+    this.mergeSort(0, this.columns.length - 1);
+    this.isSorting = false;
+  }
+  */
 
   async partition(low: number, high: number) {
     let pivot = this.columns[high];
