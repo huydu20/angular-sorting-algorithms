@@ -16,7 +16,8 @@ Angular Sorting Algorithms Visualize.
 
 ![image](https://github.com/huydu20/angular-sorting-algorithms/assets/89365325/0c022881-a6be-4cfd-b22a-95925edc68a6)
 - Get the result: 
-![](https://github.com/huydu20/angular-sorting-algorithms/tree/main/src/assets/gif/sorting-app.gif)
+
+![](https://github.com/huydu20/angular-sorting-algorithms/blob/main/src/assets/gif/sorting-app.gif)
 
 ## Setting up development environment 🛠
 
